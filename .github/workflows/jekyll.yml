@@ -1,30 +1,41 @@
 name: Build and Deploy Jekyll
+
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-      - run: |
+      - name: Install Jekyll & plugins (no Gemfile)
+        run: |
           gem install bundler
           bundle init
-          bundle add jekyll jekyll-remote-theme jekyll-feed jekyll-sitemap jekyll-seo-tag
-      - run: bundle exec jekyll build -d _site
-      - uses: actions/upload-pages-artifact@v3
+          bundle add jekyll "~> 4.3" jekyll-remote-theme jekyll-feed jekyll-sitemap jekyll-seo-tag
+      - name: Build site
+        run: bundle exec jekyll build --trace -d _site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
   deploy:
     environment:
       name: github-pages
