@@ -24,13 +24,9 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-      - name: Install Jekyll & plugins (no Gemfile)
-        run: |
-          gem install bundler
-          bundle init
-          bundle add jekyll "~> 4.3" jekyll-remote-theme jekyll-feed jekyll-sitemap jekyll-seo-tag
+          bundler-cache: true  # Gemfile / Gemfile.lock based cache
       - name: Build site
-        run: bundle exec jekyll build --trace -d _site
+        run: bundle exec jekyll build -d _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
