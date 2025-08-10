@@ -13,7 +13,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
-
+  - jekyll-spaceship
 # pagination settings
 paginate: 10
 paginate_path: "/page:num/"
