@@ -3,35 +3,40 @@ description: "CAE/MBD & NVH simulation, e-powertrain, and engineering projects"
 url: "https://oskwon9278.github.io"
 baseurl: ""
 
-# YAT 테마 (remote_theme)
+# YAT theme (remote_theme)
 remote_theme: "jeffreytse/jekyll-theme-yat"
 
-# GitHub Pages 호환 플러그인
+# GitHub Pages plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 
-# 네비게이션 메뉴에 노출할 페이지
+# pagination settings
+paginate: 10
+paginate_path: "/page:num/"
+
+# site settings
 header_pages:
   - about.md
   - projects.md
 
-# 작성자/소셜
+# author information
 author:
   name: "Ohsung Kwon"
-  email: ""
-  github: "oskwon9278"
-  linkedin: ""  # 사용자명만 넣어주세요
+  email: "oskown9278@gmail.com" 
+  github: ""
+  linkedin: "https://www.linkedin.com/in/oskwon9278/" 
 
-# YAT 옵션
+# YAT options
 yat:
   date_format: "%b %d, %Y"
   show_categories: true
   show_tags: true
   open_graph: true
 
-# 빌드 기본
+# build base
 timezone: "America/New_York"
 markdown: kramdown
