@@ -11,3 +11,8 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-spaceship"
 end
+
+gem "tzinfo", "~> 2.0"
+gem "tzinfo-data", "~> 1.2025"
+gem "webrick", "~> 1.9"
+gem "wdm", "~> 0.2.0"
