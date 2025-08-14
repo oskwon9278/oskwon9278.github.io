@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
 
-  {%- include head.html -%}
+  {% include head.html %}
 
-  <body>
 
-    {%- include views/header.html -%}
+    <body id="page-top" class="index">
 
-    {%- include views/banner.html -%}
+    {% include header.html %}
+    {% include expertise.html %}
+    {% include experience.html %}
+    {% include portfolio_grid.html %}
+    {% include team.html %}
+    {% include clients.html %}
+    {% include contact.html %}
+    {% include footer.html %}
+    {% include modals.html %}
+    {% include js.html %}
 
-    {%- include extensions/hashlocate.html -%}
-
-    {%- include extensions/theme-toggle.html -%}
-
-    {%- include extensions/click-to-top.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include views/footer.html -%}
-
-  </body>
+    </body>
 </html>
