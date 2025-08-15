@@ -25,7 +25,7 @@
                         <a class="page-scroll" href="#experience">Experience</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#portfolio">projects</a>
                     </li>
                     <!-- <li>
                         <a class="page-scroll" href="#team">Team</a>
@@ -50,7 +50,7 @@
                         {% for network in site.social %}
                         <li style="display: inline-block; margin: 0 2px;">
                             <a href="{{ network.url }}" style="display: flex; justify-content: center; align-items: center;">
-                                <i class="fa fa-{{ network.title }}"></i>
+                                <i class="fa fa-{{ network.title }}" style="font-size: 2.5rem;"></i>
                             </a>
                         </li>
                         {% endfor %}
