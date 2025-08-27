@@ -15,3 +15,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/agency.js" | prepend: site.baseurl }}"></script>
+   
+    {% unless page.yat or page.layout == 'yat-post' %}
+      <script src="{{ '/js/agency.js' | relative_url }}"></script>
+   {% endunless %}

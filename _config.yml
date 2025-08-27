@@ -44,9 +44,15 @@ social:
   - title: envelope
     url: mailto:oskwon9278@gmail.com
   - title: whatsapp
-    url: wa.me/12672993808
+    url: https://wa.me/12672993808
   - title: linkedin
     url: https://linkedin.com/in/ohsungkwon9278
+
+# collections:
+#   posts_yat:
+#     output: true
+#     permalink: /details/:name/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

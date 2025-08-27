@@ -1,0 +1,34 @@
+---
+layout: details
+---
+
+  {%- assign name = 'hidden' -%}
+  {%- include functions.html func='get_value' -%}
+  {%- assign hidden = return | default: empty -%}
+
+  {%- assign name = 'banner' -%}
+  {%- include functions.html func='get_value' -%}
+  {%- assign banner = return -%}
+
+  {%- assign hide_header = hidden | where_exp: "item", "item == 'header'" -%}
+  {%- if hide_header.size == 0 -%}
+    {%- if banner -%}
+      {%- include views/banner.html -%}
+    {%- else -%}
+      {%- include views/post-header.html -%}
+    {%- endif -%}
+  {%- endif -%}
+
+
+<div class="post">  
+  <section class="post-main">
+    <br><br><br>
+    <div class="wrapper">
+      {%- include views/back-to-main.html -%}
+      <br>
+      {%- include views/article.html -%}
+      <br>
+      {%- include views/back-to-main.html -%}
+    </div>
+  </section>
+</div>
