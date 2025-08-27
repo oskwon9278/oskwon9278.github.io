@@ -29,7 +29,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 remote_theme: y7kim/agency-jekyll-theme
-
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
