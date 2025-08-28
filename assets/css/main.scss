@@ -6,14 +6,14 @@
 $theme-colors: (
   "coolblack": #090a0b,
   "spacegrey": #353535,
-  "snowwhite": #ffffff,
+  "snowwhite": #ffffff
 );
 
 // Default brand colors
 $brand-colors: (
   "orangered": #ff5100,
   "greatgold": #f2cb05,
-  "greenblue": #389092,
+  "greenblue": #389092
 );
 
 $theme-name: "{{ site.theme_color }}";
@@ -45,11 +45,7 @@ $click-to-top-dark-color: {{ site.click_to_top.dark.color | default: "#bbb" }};
 $selection-color: unquote("{{ site.selection.color }}");
 $selection-background-color: unquote("{{ site.selection.background_color }}");
 
-@if $selection-color == "" {
-  $selection-color: inherit;
-}
-@if $selection-background-color == "" {
-  $selection-background-color: rgba(invert($brand-color), 0.3);
-}
+@if $selection-color == "" { $selection-color: inherit; }
+@if $selection-background-color == "" { $selection-background-color: rgba(invert($brand-color), 0.3); }
 
 @import "yat";

@@ -71,4 +71,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - assets/css/main.scss
+  # - assets/css/main.scss
