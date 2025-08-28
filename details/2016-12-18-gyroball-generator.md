@@ -7,7 +7,7 @@ subtitle: Academic Project@Chung-Ang University [Mar.2016 - Dec.2016]
 banner:
   video: /assets/videos/GYROvideo.mp4
   loop: true
-  volume: 0.8
+  volume: 0
   start_at: 0
   image: /assets/videos/GYROvideo.jpg
   opacity: 0.618
